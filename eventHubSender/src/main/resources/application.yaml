@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    azure:
+      credential:
+        client-id: af86e6a7-34e9-4c7c-81c9-5637da5ab3bd
+        managed-identity-enabled: true
+      eventhubs:
+        namespace: jj-eventhub.servicebus.windows.net
+        event-hub-name: jj-eventhub
+      storage:
+        blob:
+          endpoint: https://teststoragejj.blob.core.windows.net
+          container-name: test-container
+  application:
+    name: event-hub-sender
+server:
+  port: 8081

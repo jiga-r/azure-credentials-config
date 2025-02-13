@@ -1,0 +1,11 @@
+.idea/
+*.iml
+*.iws
+out/
+build/
+target/
+*.log
+*.tmp
+.gradle/
+*.jar
+Dockerfile

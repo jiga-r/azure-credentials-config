@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    azure:
+      eventhubs:
+        namespace: jj-eventhub
+        event-hub-name: jj-eventhub
+        credential:
+          client-id: af86e6a7-34e9-4c7c-81c9-5637da5ab3bd
+          managed-identity-enabled: true
+        processor:
+          consumer-group: $Default
+          checkpoint-store:
+            account-name: teststoragejj
+            container-name: checkpoint-store
+#            credential:
+#              client-id: af86e6a7-34e9-4c7c-81c9-5637da5ab3bd
+#              managed-identity-enabled: true

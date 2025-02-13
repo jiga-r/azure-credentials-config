@@ -1,0 +1,49 @@
+plugins {
+    id 'org.springframework.boot' version '3.3.5' // Use the latest Spring Boot version
+    id 'io.spring.dependency-management' version '1.1.6'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
+}
+
+tasks.withType(JavaCompile) {
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.azure:azure-identity:1.15.1' // Azure Identity for Managed Identity
+    annotationProcessor 'org.projectlombok:lombok' // Optional, for reducing boilerplate code
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // https://mvnrepository.com/artifact/com.azure.spring/spring-cloud-azure-dependencies
+    implementation 'com.azure.spring:spring-cloud-azure-dependencies:5.19.0'
+
+    // Azure Spring Cloud Stream Event Hubs
+    implementation 'com.azure.spring:spring-cloud-azure-starter-integration-eventhubs:5.19.0'
+
+    // Spring Boot Test (optional)
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
