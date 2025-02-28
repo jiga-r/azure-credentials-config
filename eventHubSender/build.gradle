@@ -33,7 +33,7 @@ dependencies {
 	implementation 'com.azure:azure-identity:1.10.0' // Azure Identity for Managed Identity
 	implementation 'com.azure:azure-messaging-eventhubs:5.15.0' // Azure Event Hubs
 	annotationProcessor 'org.projectlombok:lombok' // Required if using Lombok
-	implementation 'com.azure:azure-storage-blob:12.25.0' // For Storage Account
+	implementation 'com.azure:azure-storage-blob:12.29.0' // For Storage Account
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

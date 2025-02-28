@@ -1,4 +1,4 @@
-package test.subscriber.configuration;
+package org.example.config;
 
 import com.azure.identity.DefaultAzureCredential;
 import com.azure.identity.DefaultAzureCredentialBuilder;

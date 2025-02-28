@@ -35,12 +35,6 @@ public class EventHubProcessorConfig {
         containerProperties.setEventHubName(eventhubName);
         containerProperties.setConsumerGroup(consumerGroup);
         containerProperties.setCheckpointConfig(new CheckpointConfig(CheckpointMode.MANUAL));
-//
-//        // Explicitly set the credential properties
-//        containerProperties.getCredential().setManagedIdentityEnabled(true);
-//        containerProperties.getCredential().setClientId(clientId); // Only needed if using user-assigned managed identity
-//
-//        log.info("EventHubsContainerProperties: {}", containerProperties);
 
         return new EventHubsMessageListenerContainer(processorFactory, containerProperties);
     }

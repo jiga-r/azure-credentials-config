@@ -1,0 +1,79 @@
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+out/
+*.ipr
+*.xml
+*.bin
+*.lock
+
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Java & Gradle/Maven
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
+bin/
+!src/main/resources/static/**/ # Allow static resources
+
+# Logs & temp files
+*.log
+*.tmp
+hs_err_pid*
+*.swp
+*.swo
+
+# Maven
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+build/
+gradle-app.setting
+gradle-app.local/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Lombok cache
+.lombok/
+
+# Spring Boot
+*.h2.db
+*.mv.db
+*.db-journal
+*.log
+.env
+*.properties~
+*.yml~
+spring.log
+
+# Node (if using frontend with Spring Boot)
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnp
+.pnp.js
+
+# IDE-specific files
+*.sublime-project
+*.sublime-workspace
+*.vscode/
+*.idea/
+
+# Generated files
+/.cache/
+/tmp/
+
+# Ignore local run configurations
+run/

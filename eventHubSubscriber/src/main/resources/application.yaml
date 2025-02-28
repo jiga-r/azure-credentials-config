@@ -1,6 +1,9 @@
 spring:
   cloud:
     azure:
+      credential:
+        client-id: af86e6a7-34e9-4c7c-81c9-5637da5ab3bd
+        managed-identity-enabled: true
       eventhubs:
         namespace: jj-eventhub
         event-hub-name: jj-eventhub
@@ -12,6 +15,14 @@ spring:
           checkpoint-store:
             account-name: teststoragejj
             container-name: checkpoint-store
-#            credential:
-#              client-id: af86e6a7-34e9-4c7c-81c9-5637da5ab3bd
-#              managed-identity-enabled: true
+            credential:
+              client-id: af86e6a7-34e9-4c7c-81c9-5637da5ab3bd
+              managed-identity-enabled: true
+      storage:
+        blob:
+          endpoint: https://teststoragejj.blob.core.windows.net
+          container-name: test-container
+
+logging:
+  level:
+    com.azure: warn
